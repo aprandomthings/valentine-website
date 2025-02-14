@@ -1,0 +1,142 @@
+body {
+    background-color: #fcd0d0; /* Soft cute pink background */
+    font-family: 'Press Start 2P', cursive; /* Retro pixel font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem; /* Bigger question font size */
+    color: #ff5c8d; /* Light red-pink color */
+    margin-bottom: 50px;
+}
+
+/* Rainbow Text Animation */
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+.rainbow-text {
+    animation: rainbow 3s linear infinite; /* Rainbow flashing */
+}
+
+/* Falling Images (Hearts & Flowers) */
+.falling-image {
+    position: absolute;
+    width: 70px; /* Image size */
+    height: 70px;
+    opacity: 1;
+    transition: top 2.5s linear; /* Slower fall */
+    pointer-events: none;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Adds space between the images */
+    margin-bottom: 40px; /* Increases space between images and buttons */
+}
+
+.valentine-img {
+    border: none;
+}
+
+.valentine-img:first-child {
+    width: 250px; /* Adjust based on pic1’s aspect ratio */
+    height: auto;
+}
+
+.valentine-img:last-child {
+    width: 200px; /* Adjust based on pic2’s aspect ratio */
+    height: auto;
+}
+
+/* Container for the pray and kneel images */
+.image-container-pray {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Adds space between the two images */
+    margin-top: 30px; /* Space above the images */
+}
+
+/* Common style for both images */
+.tilted-image {
+    width: 100px; /* Adjust width as necessary */
+    height: auto;
+    transform-origin: bottom right; /* Allows the tilt to be from the bottom right corner */
+    transition: transform 0.3s ease;
+}
+
+/* Specific tilts */
+.pray-img {
+    transform: rotate(-10deg); /* Slightly tilt the pray image */
+}
+
+.kneel-img {
+    transform: rotate(10deg); /* Slightly tilt the kneel image */
+}
+
+
+/* Flexbox container for buttons and images */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between images and buttons */
+    margin-top: -20px; /* Move buttons up */
+}
+
+/* Flexbox for buttons to stack vertically */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between the buttons */
+}
+
+/* General button styles */
+button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    margin: 10px;
+    border-radius: 0px; /* Rectangular buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 3px solid transparent; /* Prevent layout shift */
+}
+
+/* Yes! Button */
+button.nes-btn.is-success {
+    background-color: #00aaff; /* Light blue */
+    color: white;
+    border-color: #0088cc; /* Slightly darker blue */
+}
+
+button.nes-btn.is-success:hover {
+    background-color: #0088cc;
+    border-color: #006699; /* Darker blue on hover */
+}
+
+/* Try Again Button */
+button.nes-btn.is-error {
+    background-color: #ff5c8d; /* Soft red */
+    color: white;
+    border-color: #e04a76; /* Slightly darker red */
+}
+
+button.nes-btn.is-error:hover {
+    background-color: #ff3e6e;
+    border-color: #c8375a; /* Darker red on hover */
+}
